@@ -43,6 +43,12 @@
   box-sizing: border-box;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -52,7 +58,6 @@ html {
 
 body {
   line-height: 1.6;
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -88,8 +93,9 @@ h1, h2, h3, h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   text-align: center;
+  flex-wrap: wrap;
 }
 .top-bar-link {
   color: #34D399;
@@ -1041,7 +1047,7 @@ h1, h2, h3, h4 {
 /* Mobile Table Optimization */
 @media (max-width: 640px) {
   .table-wrapper {
-    margin: 0 -12px;
+    margin: 0;
     border-radius: 12px;
     border-left: none;
     border-right: none;
@@ -1074,5 +1080,77 @@ h1, h2, h3, h4 {
   .pricing-table tfoot .btn {
     padding: 10px 6px !important;
     font-size: 11px !important;
+  }
+}
+
+
+/* ==================== ZERO HORIZONTAL OVERFLOW FIX ==================== */
+*, *::before, *::after {
+  max-width: 100%;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  .hero {
+    padding: 40px 0 60px;
+  }
+  .section {
+    padding: 60px 0;
+  }
+  .top-bar {
+    font-size: 11px;
+    padding: 8px 12px;
+  }
+  .top-bar-content {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  /* Mockup Header Mobile */
+  .mockup-header {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 14px;
+  }
+  .mockup-status {
+    display: none;
+  }
+  .frame-url {
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Category Tabs Wrap */
+  .category-tabs {
+    flex-wrap: wrap;
+  }
+  
+  /* Footer Mobile */
+  .footer-bottom-content {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  /* Buttons Mobile */
+  .hero-actions .btn {
+    width: 100%;
+  }
+  .hero-trust {
+    flex-direction: column;
+    gap: 10px;
   }
 }
