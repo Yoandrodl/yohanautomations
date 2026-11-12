@@ -1036,3 +1036,43 @@ h1, h2, h3, h4 {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Mobile Table Optimization */
+@media (max-width: 640px) {
+  .table-wrapper {
+    margin: 0 -12px;
+    border-radius: 12px;
+    border-left: none;
+    border-right: none;
+  }
+  .pricing-table th, .pricing-table td {
+    padding: 10px 8px !important;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+  }
+  .pricing-table th {
+    font-size: 13px !important;
+    padding: 12px 6px !important;
+  }
+  .pricing-table th span {
+    font-size: 10px !important;
+  }
+  .col-feature {
+    width: 40% !important;
+  }
+  .col-free, .col-pro {
+    width: 30% !important;
+  }
+  .badge-good {
+    padding: 2px 6px !important;
+    font-size: 10px !important;
+  }
+  .pricing-table tfoot td {
+    padding: 14px 6px !important;
+  }
+  .pricing-table tfoot .btn {
+    padding: 10px 6px !important;
+    font-size: 11px !important;
+  }
+}
