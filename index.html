@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowPOS — Turn Google Sheets into a $0 iPad POS System | Yohan Automations</title>
+  <meta name="description" content="Free, lightweight Point of Sale (POS) system running entirely on Google Sheets. $0 monthly fees, no transaction commissions. Perfect for cafes, bakeries, and retail.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-bar">
+    <div class="container top-bar-content">
+      <span>⚡ <strong>FlowPOS Free Edition</strong> is now live! 100% Free Google Sheets POS.</span>
+      <a href="https://docs.google.com/spreadsheets/d/1-UobgtU9nExtdgMhc4Zaw2UXv8v0HCLj6vci8Owvdr8/copy" target="_blank" class="top-bar-link">Get Free Template ➔</a>
+    </div>
+  </aside>
+
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">Yohan<strong>Automations</strong></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#comparison">Free vs Pro</a>
+        <a href="#services">Fiverr Services</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="https://docs.google.com/spreadsheets/d/1-UobgtU9nExtdgMhc4Zaw2UXv8v0HCLj6vci8Owvdr8/copy" target="_blank" class="btn btn-primary btn-sm">
+          🎁 Make a Free Copy
+        </a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#features">Features</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#comparison">Free vs Pro</a>
+    <a href="#services">Fiverr Services</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://docs.google.com/spreadsheets/d/1-UobgtU9nExtdgMhc4Zaw2UXv8v0HCLj6vci8Owvdr8/copy" target="_blank" class="btn btn-primary" style="margin-top: 15px;">
+      🎁 Make a Free Copy
+    </a>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>$0 Monthly Subscription Forever • No Card Required</span>
+        </div>
+        <h1 class="hero-title">
+          Turn Google Sheets into a Fast, <span class="gradient-text">$0 iPad POS</span> for Your Cafe or Shop.
+        </h1>
+        <p class="hero-desc">
+          Stop paying $60–$120/month for Square or Shopify POS. <strong>FlowPOS</strong> gives you a fast touch register, automatic receipt printing, and a live sales dashboard—running 100% privately on your own Google Drive.
+        </p>
+        
+        <div class="hero-actions">
+          <a href="https://docs.google.com/spreadsheets/d/1-UobgtU9nExtdgMhc4Zaw2UXv8v0HCLj6vci8Owvdr8/copy" target="_blank" class="btn btn-primary btn-lg">
+            <span>🎁 Make a Free Copy in Google Sheets</span>
+            <small>Instant Duplicate • 100% Free Forever</small>
+          </a>
+          <a href="#comparison" class="btn btn-secondary btn-lg">
+            <span>🚀 Upgrade to FlowPOS Pro ($75)</span>
+            <small>PIN Lock • Telegram Alerts • Date Filters</small>
+          </a>
+        </div>
+
+        <div class="hero-trust">
+          <div class="trust-item">
+            <span class="check">✓</span> Unlimited Orders
+          </div>
+          <div class="trust-item">
+            <span class="check">✓</span> 100% Private on Your Google Drive
+          </div>
+          <div class="trust-item">
+            <span class="check">✓</span> Works on iPad, Phone &amp; PC
+          </div>
+        </div>
+
+        <!-- Interactive UI Mockup Showcase -->
+        <div class="hero-preview">
+          <div class="preview-frame">
+            <div class="frame-bar">
+              <div class="frame-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="frame-url">
+                <span>🔒 flowpos.app/cashier-register</span>
+              </div>
+              <div class="frame-badge">⚡ Live Sync</div>
+            </div>
+            
+            <div class="preview-content">
+              <!-- Left: Register View -->
+              <div class="mockup-pos">
+                <div class="mockup-header">
+                  <div class="mockup-brand">⚡ <strong>FlowPOS</strong> <span class="tag-free">FREE</span></div>
+                  <div class="mockup-nav">
+                    <span class="active">🛒 Register</span>
+                    <span>📋 Menu</span>
+                    <span>📜 History</span>
+                  </div>
+                  <div class="mockup-status">🟢 Connected to Sheet</div>
+                </div>
+
+                <div class="mockup-body">
+                  <div class="mockup-catalog">
+                    <div class="category-tabs">
+                      <span class="pill active">All</span>
+                      <span class="pill">Coffee</span>
+                      <span class="pill">Toasties</span>
+                      <span class="pill">Bakery</span>
+                    </div>
+
+                    <div class="product-cards">
+                      <div class="p-card">
+                        <div class="p-img">🥑</div>
+                        <div class="p-info">
+                          <h4>Avocado on Rye</h4>
+                          <span class="p-price">$16.50</span>
+                        </div>
+                      </div>
+                      <div class="p-card">
+                        <div class="p-img">🥪</div>
+                        <div class="p-info">
+                          <h4>Chicken Pesto Toastie</h4>
+                          <span class="p-price">$15.00</span>
+                        </div>
+                      </div>
+                      <div class="p-card">
+                        <div class="p-img">☕</div>
+                        <div class="p-info">
+                          <h4>Piccolo Specialty Latte</h4>
+                          <span class="p-price">$5.00</span>
+                        </div>
+                      </div>
+                      <div class="p-card">
+                        <div class="p-img">🥐</div>
+                        <div class="p-info">
+                          <h4>Almond Butter Croissant</h4>
+                          <span class="p-price">$5.50</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Right: Cart & Summary -->
+                  <div class="mockup-cart">
+                    <div class="cart-title">
+                      <span>🛒 Cart</span>
+                      <span class="table-badge">Table 4</span>
+                    </div>
+                    <div class="cart-items">
+                      <div class="c-item">
+                        <span>1x Avocado on Rye</span>
+                        <strong>$16.50</strong>
+                      </div>
+                      <div class="c-item">
+                        <span>2x Piccolo Latte</span>
+                        <strong>$10.00</strong>
+                      </div>
+                      <div class="c-item">
+                        <span>1x Almond Croissant</span>
+                        <strong>$5.50</strong>
+                      </div>
+                    </div>
+                    <div class="cart-totals">
+                      <div class="c-row"><span>Subtotal:</span><span>$32.00</span></div>
+                      <div class="c-row total"><span>Total Due:</span><span>$32.00</span></div>
+                    </div>
+                    <button class="mockup-btn-pay">💳 CHARGE $32.00 (Cash / Card)</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Problem vs Solution Stats -->
+    <section class="section problem-solution">
+      <div class="container">
+        <div class="section-badge">Cost Breakdown</div>
+        <h2 class="section-title">Why Independent Cafes Are Ditching Expensive POS</h2>
+        <p class="section-subtitle">Traditional POS companies lock you into recurring monthly fees and cut into your hard-earned margins.</p>
+
+        <div class="comparison-cards">
+          <div class="card card-traditional">
+            <div class="card-header-bad">
+              <h3>Traditional SaaS POS</h3>
+              <div class="price-strike">$79 – $150 <span>/ month</span></div>
+            </div>
+            <ul class="bad-list">
+              <li>❌ Expensive recurring subscriptions ($900+/year)</li>
+              <li>❌ Extra 2.6% + 10¢ per transaction cut</li>
+              <li>❌ Proprietary locked hardware (must buy their tablets)</li>
+              <li>❌ If you stop paying, you lose access to your sales history</li>
+              <li>❌ Complex back-end with features you never use</li>
+            </ul>
+          </div>
+
+          <div class="card card-flowpos">
+            <div class="popular-ribbon">SMART CHOICE</div>
+            <div class="card-header-good">
+              <h3>⚡ FlowPOS (Google Sheets)</h3>
+              <div class="price-free">$0 <span>Forever</span></div>
+            </div>
+            <ul class="good-list">
+              <li>✅ <strong>100% Free Forever:</strong> Zero monthly subscription fees</li>
+              <li>✅ <strong>Zero Per-Transaction Cuts:</strong> Keep 100% of your money</li>
+              <li>✅ <strong>Bring Your Own Device:</strong> Use any iPad, Android, or laptop</li>
+              <li>✅ <strong>Your Own Private Cloud:</strong> Stored securely on your Google Drive</li>
+              <li>✅ <strong>Super Lightweight:</strong> Fast 1-second checkout without bloat</li>
+            </ul>
+            <a href="https://docs.google.com/spreadsheets/d/1-UobgtU9nExtdgMhc4Zaw2UXv8v0HCLj6vci8Owvdr8/copy" target="_blank" class="btn btn-primary btn-block">
+              Get FlowPOS Free Template ➔
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Grid -->
+    <section class="section features" id="features">
+      <div class="container">
+        <div class="section-badge">Everything You Need</div>
+        <h2 class="section-title">Built Specifically for Busy Small Business Owners</h2>
+        <p class="section-subtitle">A clean touch register on front, an automated executive dashboard on back.</p>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon">⚡</div>
+            <h3>Fast Touch Register</h3>
+            <p>Designed for speed during morning coffee rushes. Category filtering, quick search, discount percentage, and 1-tap Cash or Card billing.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon">📊</div>
+            <h3>Live Executive Dashboard</h3>
+            <p>Formulas in Google Sheets automatically calculate Total Revenue, Total Orders, Average Ticket Value, and dynamic Top 5 Best Sellers.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon">☁️</div>
+            <h3>Direct Google Drive Upload</h3>
+            <p>Take food photos with your phone or tablet camera—FlowPOS automatically uploads them to your Google Drive and syncs with your register.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon">☕</div>
+            <h3>Smart Emoji Fallbacks</h3>
+            <p>Don't have photos ready? FlowPOS automatically generates cute culinary emoji icons (☕, 🥐, 🥪, 🍵) based on item names and categories.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon">🧾</div>
+            <h3>Instant Receipt Printing</h3>
+            <p>Generate clean, professional receipts ready for thermal receipt printers or standard desktop air-print with single-click formatting.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon">📱</div>
+            <h3>Install as iPad / Mobile App</h3>
+            <p>Tap "Add to Home Screen" on Safari or Chrome to turn FlowPOS into a borderless, full-screen standalone app on your cashier counter.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works (3 Steps) -->
+    <section class="section how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-badge">Zero Coding Required</div>
+        <h2 class="section-title">Launch Your Register in 3 Simple Steps</h2>
+        <p class="section-subtitle">No server to maintain. If you know how to use Google Drive, you can run FlowPOS.</p>
+
+        <div class="steps-container">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Make a Copy</h3>
+            <p>Click the duplicate link to save your personal copy of FlowPOS directly into your Google Drive.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Set Your Menu (30s)</h3>
+            <p>Open the "Menu" tab in your sheet. Type your product names, categories, and prices. That's it!</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Launch Cashier</h3>
+            <p>Click "Launch POS Cashier" from the top menu, or deploy the web app URL to bookmark on your iPad counter.</p>
+          </div>
+        </div>
+
+        <div class="setup-cta-box">
+          <h3>Ready to test it for your business?</h3>
+          <a href="https://docs.google.com/spreadsheets/d/1-UobgtU9nExtdgMhc4Zaw2UXv8v0HCLj6vci8Owvdr8/copy" target="_blank" class="btn btn-primary btn-lg">
+            🎁 Download Free Google Sheets Template ➔
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table: Free vs Pro -->
+    <section class="section comparison" id="comparison">
+      <div class="container">
+        <div class="section-badge">Choose Your Tier</div>
+        <h2 class="section-title">FlowPOS Free vs FlowPOS Pro</h2>
+        <p class="section-subtitle">Start 100% free with all essentials. Upgrade to Pro when you need staff security and phone alerts.</p>
+
+        <div class="table-wrapper">
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th class="col-feature">Feature &amp; Capability</th>
+                <th class="col-free">FlowPOS Free<br><span>$0 / month</span></th>
+                <th class="col-pro">FlowPOS Pro<br><span>$75 One-Time</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monthly Software Fees</td>
+                <td><span class="badge-good">$0 Forever</span></td>
+                <td><span class="badge-good">$0 Forever</span></td>
+              </tr>
+              <tr>
+                <td>Transaction Volume Limit</td>
+                <td>Unlimited Orders</td>
+                <td>Unlimited Orders</td>
+              </tr>
+              <tr>
+                <td>Google Sheets &amp; Drive Sync</td>
+                <td>✅ Included</td>
+                <td>✅ Included</td>
+              </tr>
+              <tr>
+                <td>Executive Dashboard</td>
+                <td>All-Time Overview</td>
+                <td>All-Time + Today / Date Filters</td>
+              </tr>
+              <tr>
+                <td>Staff 4-Digit PIN Security Keypad</td>
+                <td>❌ Open (No PIN)</td>
+                <td><strong class="pro-text">✅ Admin PIN Lock Screen</strong></td>
+              </tr>
+              <tr>
+                <td>Instant Telegram Alerts to Your Phone</td>
+                <td>❌ None</td>
+                <td><strong class="pro-text">✅ Real-Time Sale &amp; Closing Bot</strong></td>
+              </tr>
+              <tr>
+                <td>Daily Closing Revenue Summary</td>
+                <td>Manual in Sheet</td>
+                <td><strong class="pro-text">✅ Auto-Sent to Telegram Nightly</strong></td>
+              </tr>
+              <tr>
+                <td>Inventory / Stock Auto-Deduction</td>
+                <td>❌ Off (Fast Mode)</td>
+                <td><strong class="pro-text">✅ Auto-Deduct on Checkout</strong></td>
+              </tr>
+              <tr>
+                <td>White-Label Custom Branding</td>
+                <td>Powered by Yohan Automations</td>
+                <td><strong class="pro-text">✅ 100% Your Shop Logo &amp; Name</strong></td>
+              </tr>
+              <tr>
+                <td>Fiverr 1-on-1 Setup Assistance</td>
+                <td>Community Guide</td>
+                <td><strong class="pro-text">✅ Full VIP Setup by Yohan</strong></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td></td>
+                <td>
+                  <a href="https://docs.google.com/spreadsheets/d/1-UobgtU9nExtdgMhc4Zaw2UXv8v0HCLj6vci8Owvdr8/copy" target="_blank" class="btn btn-secondary btn-block">
+                    Get Free Edition
+                  </a>
+                </td>
+                <td>
+                  <a href="https://www.fiverr.com/yohan_din" target="_blank" class="btn btn-pro btn-block">
+                    🚀 Upgrade to Pro ($75)
+                  </a>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other Fiverr Automation Services -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-badge">Custom Services</div>
+        <h2 class="section-title">Need Custom Automation or Formula Repair?</h2>
+        <p class="section-subtitle">Hire Yohan on Fiverr for high-precision spreadsheet fixes and custom business bots.</p>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-badge">Top Rated</div>
+            <div class="service-icon">🛠️</div>
+            <h3>Google Sheets &amp; Excel Formula Repair</h3>
+            <p>Stuck with <code>#REF!</code>, <code>#VALUE!</code>, <code>#N/A</code>, or broken VLOOKUP/INDEX MATCH? I will diagnose and fix your broken spreadsheet calculations fast.</p>
+            <div class="service-price">Starting at <strong>$15</strong></div>
+            <a href="https://www.fiverr.com/yohan_din/fix-your-google-sheets-formula-and-excel-spreadsheet-errors" target="_blank" class="service-btn">
+              Fix My Formula on Fiverr ➔
+            </a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-badge">Pro Solution</div>
+            <div class="service-icon">🤖</div>
+            <h3>Telegram Bot &amp; Workflow Automations</h3>
+            <p>Get automated WhatsApp or Telegram alerts for every sale, auto-generate PDF invoices, or connect Google Sheets to your custom external APIs.</p>
+            <div class="service-price">Starting at <strong>$75</strong></div>
+            <a href="https://www.fiverr.com/yohan_din" target="_blank" class="service-btn">
+              Order Custom Bot ➔
+            </a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-badge">Enterprise</div>
+            <div class="service-icon">📈</div>
+            <h3>Custom Executive KPI Dashboards</h3>
+            <p>Transform messy multi-tab spreadsheets into clean, interactive executive dashboards with live charts, sales trends, and automated financial summaries.</p>
+            <div class="service-price">Starting at <strong>$90</strong></div>
+            <a href="https://www.fiverr.com/yohan_din" target="_blank" class="service-btn">
+              Build My Dashboard ➔
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq" id="faq">
+      <div class="container">
+        <div class="section-badge">Frequently Asked Questions</div>
+        <h2 class="section-title">Got Questions? We’ve Got Answers.</h2>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span>Is FlowPOS really 100% free?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Yes, completely. FlowPOS Free Edition runs on Google Sheets and Google Apps Script, both of which are free tools provided by Google. You never pay a monthly subscription fee or transaction commission.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Can I use my iPad as the cashier register?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Absolutely! Once you deploy your web app link in Google Apps Script, simply open that link in Safari on your iPad, tap the Share icon, and select "Add to Home Screen". It opens as a full-screen, responsive POS app on your counter.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Where is my customer and sales data stored?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Your data is stored 100% privately in your own Google Drive and Google Sheets. We have zero access to your data, transactions, customers, or financials.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>How do I get the Telegram Alert Bot and Staff PIN lock?</span>
+              <span class="faq-icon">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>The Staff 4-Digit PIN Security lock and the Real-Time Telegram Sales Bot are part of our <strong>FlowPOS Pro Edition ($75 one-time setup)</strong>. You can order directly through our verified Fiverr profile, and Yohan will configure everything for your shop.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Call to Action -->
+    <section class="cta-banner">
+      <div class="container cta-container">
+        <h2>Start Running Your $0 POS Today</h2>
+        <p>No credit card required. Make a free copy of the spreadsheet and start ringing up orders in 60 seconds.</p>
+        <div class="cta-buttons">
+          <a href="https://docs.google.com/spreadsheets/d/1-UobgtU9nExtdgMhc4Zaw2UXv8v0HCLj6vci8Owvdr8/copy" target="_blank" class="btn btn-primary btn-lg">
+            🎁 Make a Free Copy of FlowPOS
+          </a>
+          <a href="https://www.fiverr.com/yohan_din" target="_blank" class="btn btn-secondary btn-lg">
+            Hire Yohan on Fiverr ($75 Pro)
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">Yohan<strong>Automations</strong></span>
+        </div>
+        <p>Building high-precision automations, spreadsheet workflows, and modern cloud business tools.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Products</h4>
+          <a href="https://docs.google.com/spreadsheets/d/1-UobgtU9nExtdgMhc4Zaw2UXv8v0HCLj6vci8Owvdr8/copy" target="_blank">FlowPOS Free Edition</a>
+          <a href="https://www.fiverr.com/yohan_din" target="_blank">FlowPOS Pro ($75)</a>
+        </div>
+        <div class="footer-col">
+          <h4>Fiverr Services</h4>
+          <a href="https://www.fiverr.com/yohan_din/fix-your-google-sheets-formula-and-excel-spreadsheet-errors" target="_blank">Formula Repair ($15)</a>
+          <a href="https://www.fiverr.com/yohan_din" target="_blank">Custom Apps Script</a>
+          <a href="https://www.fiverr.com/yohan_din" target="_blank">Telegram Alert Bots</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://www.fiverr.com/yohan_din" target="_blank">Fiverr Profile</a>
+          <a href="https://github.com/Yoandrodl/yohanautomations" target="_blank">GitHub Repository</a>
+          <a href="https://instagram.com/yohanautomations" target="_blank">Instagram (@yohanautomations)</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2026 Yohan Automations. All rights reserved.</p>
+        <p>Powered by Google Sheets &amp; Cloudflare / GitHub Pages.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
